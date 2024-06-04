@@ -1,0 +1,562 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav .logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 2rem;
+    font-family: "Sassy Frass", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+nav .nav-links li a {
+    color: #fdfafa;
+    text-decoration: none;
+    font-family: "IM Fell Double Pica SC", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+nav .cart a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+}
+
+.cart-count {
+    background: red;
+    color: white;
+    border-radius: 50%;
+    padding: 0.2rem 0.5rem;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+
+.main-banner {
+    background: url(imagenes/fondo\ principal.jpg) no-repeat center center/cover;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.main-banner .banner-content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    color: #fff;
+    width: 100%;
+    max-width: 800px;
+}
+
+.main-banner .btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background: #00c7b7;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 0.5rem;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 1rem;
+    text-align: right;
+}
+
+footer .social-media a {
+    color: #fff;
+    margin: 0 0.5rem;
+    text-decoration: none;
+}
+
+footer .social-media a i {
+    font-size: 1.25rem;
+}
+
+.product-categories {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 2rem ;
+    padding: 1rem;
+    background-color: #fdfdfd;
+}
+
+.products {
+    padding: 2rem;
+    background-color: #fff;
+}
+
+.products h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+    font-family: "IM Fell Double Pica SC", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.products .view-all {
+    float: right;
+    font-size: 1rem;
+    color: #00c7b7;
+    text-decoration: none;
+    margin-top: 1rem;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    width: 100%;
+    max-width: 300px;
+    margin: 1rem;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    margin: 10px;
+}
+
+.product-card h3 {
+    margin: 1rem 0;
+    font-family: "IM Fell Double Pica SC", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.product-card .price {
+    background: #00c7b7;
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+}
+
+.parallax-section {
+    background-image: url('imagenes/laptop.jpg');
+    min-height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parallax-content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    max-width: 600px;
+    text-align: center;
+}
+
+.parallax-content small {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-family: "IM Fell Double Pica SC", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.parallax-content h1 {
+    margin-bottom: 20px;
+    font-size: 36px;
+    font-family: "IM Fell Double Pica SC", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.parallax-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-family: "IM Fell Double Pica SC", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.parallax-content .play-button {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background-color: #00c7b7;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.parallax-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.category-carousel {
+    padding: 40px 0;
+}
+
+
+/* Swiper Container Styling */
+.swiper-container {
+    width: 100%;
+    padding: 20px 0;
+}
+
+.swiper-slide category{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.category {
+    background: #060606;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease;
+    width: 90%;
+    max-width: 300px;
+    margin: auto;
+    background-color:#00aced;
+}
+
+/* Estilos individuales para cada imagen */
+#img-celulares-tablets {
+    width: 100%;
+    height: 320px; /* Ajustar según sea necesario */
+    object-fit: cover;
+}
+
+#img-computadores-laptops {
+    width: 100%;
+    height: 320px; /* Ajustar según sea necesario */
+    object-fit: cover;
+}
+
+#img-accesorios {
+    width: 100%;
+    height: 320px; /* Ajustar según sea necesario */
+    object-fit: cover;
+}
+
+#img-gadgets-tecnologicos {
+    width: 100%;
+    height: 320px; /* Ajustar según sea necesario */
+    object-fit: cover;
+}
+.category-info {
+    padding: 1rem;
+    text-align: center;
+}
+
+.category-info h2 {
+    margin-bottom: 1rem;
+    font-family: "IM Fell Double Pica SC", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.category-info .btn {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: #00c7b7;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 0.5rem;
+}
+
+
+.new-content-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+    background-color: #f4f4f4;
+}
+
+.new-content-section .content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.new-content-section .text-content {
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+.new-content-section .text-content h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.new-content-section .text-content p {
+    margin-bottom: 1em;
+    font-family: "IM Fell Double Pica SC", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.new-content-section .btn {
+    background: #00aced;
+    color: white;
+    padding: 1em 2em;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.new-content-section .image-content {
+    width: 100%;
+    max-width: 500px;
+}
+
+.new-content-section .image-content img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.subscription-section {
+    background-color: #f4f4f4;
+    padding: 2em 0;
+    text-align: center;
+}
+
+.subscription-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2em;
+}
+
+.subscription-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.subscription-icon {
+    margin-bottom: 1em;
+}
+
+.subscription-icon i {
+    font-size: 2em;
+    color: #00aced;
+}
+
+.subscription-text {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.subscription-text h2 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.subscription-text span {
+    color: #00aced;
+}
+
+.subscription-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subscription-form input[type="email"] {
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 0.5em;
+    width: 100%;
+    max-width: 300px;
+}
+
+.subscription-form button {
+    padding: 0.5em 1em;
+    background-color: #00aced;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.subscription-form button:hover {
+    background-color: #008bb5;
+}
+
+.footer-links li a {
+    color: white;
+    text-decoration: none;
+}
+
+.category {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease;
+    width: 90%;
+    max-width: 300px;
+}
+
+.category img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    margin: 10px;
+}
+
+.category-info {
+    padding: 1rem;
+    text-align: center;
+}
+
+.category-info h2 {
+    margin-bottom: 1rem;
+    font-family: "IM Fell Double Pica SC", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.category-info .btn {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: #00c7b7;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 0.5rem;
+}
+
+
+@media (min-width: 600px) {
+    .nav .logo a {
+        font-size: 4rem;
+    }
+    .category {
+        width: 48%;
+    }
+    .product-card {
+        width: 48%;
+    }
+}
+
+@media (min-width: 768px) {
+    nav .logo a {
+        font-size: 6rem;
+    }
+    .product-categories {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .category {
+        width: 32%;
+    }
+    .product-card {
+        width: 32%;
+    }
+    .new-content-section {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .new-content-section .content-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .subscription-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .subscription-form {
+        flex-direction: row;
+    }
+    .subscription-form input[type="email"] {
+        margin-right: 0.5em;
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    nav .logo a {
+        font-size: 8rem;
+    }
+    .category {
+        width: 23%;
+    }
+    .product-card {
+        width: 23%;
+    }
+}
